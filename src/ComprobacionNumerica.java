@@ -99,6 +99,12 @@ public class ComprobacionNumerica extends javax.swing.JFrame {
     private void btnComprobarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnComprobarActionPerformed
         // TODO add your handling code here:
         int Num1 = Integer.parseInt(txtNum1.getText());
+        
+        // Veriifica que el que el numero este entre 1 a 500
+        if (Num1 < 1 || Num1 > 500) {
+            JOptionPane.showMessageDialog(rootPane, "Ingrese un número válido entre 1 y 500.");
+            return;  // Salir del método si la validación no es exitosa
+        }
 
         // Comprobar si el número es perfecto
         if (numero_Perfecto(Num1)) {
